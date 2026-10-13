@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>13-14</title> 
+</head>
+ 
+<body>
+ 
+<h1>
+    <p id="13-14">13-14</p>
+</h1>
+
+<a id="top"><h2>Навигация</h2></a>
+<p><a href="#1" target="_self">ФИО</a></p>
+<p><a href="#2" target="_self">Табица</a></p>
+<p><a href="#3" target="_self">Задача</a></p>
+
+<h3><a id="1">ФИО</a></h3>
+<p>Имя <span id="name">Александра</span></p>
+<p>Фамилия <span id="surname">Любопытова</span></p>
+<p>Год рождения <span id="birthyear">2007</span></p>
+<p id="for_click">кликнуть</p>
+<p><a href="#top">К началу</a></p>
+<p><a href="./FIO.html">Отдельная страница ФИО</a></p>
+
+<script>function find_edit(){
+    const new_node  = document.getElementById('name')
+    new_node.innerHTML="Aleksandra"
+
+    const surname_node = document.getElementById("surname");
+    surname_node.innerHTML = "Liubopytova";
+
+    const birthyear_node = document.getElementById("birthyear");
+    birthyear_node.innerHTML = "two thousand seven";
+}
+
+const node_for_click = document.getElementById("for_click")
+node_for_click.addEventListener("click",find_edit)
+</script>
+
+<h3><a id="2">Табица</a></h3>
+<table align="center" cellspacing="10" cellpadding="20" border="2" width="500px">
+    <tr align="center">
+      <td>
+        <img src="./aircraft_img/scrn.png" height="500">
+      </td>
+    </tr>
+</table>
+<p><a href="#top">К началу</a></p>
+<p><a href="./table.html">Отдельная страница Табица</a></p>
+ 
+<h3><a id="3">Задача</a></h3>
+<div class="card">
+      <p>Плацкартный вагон</p>
+      <p>Введите номер места (1–54):</p>
+      <input type="number" id="seat" min="1" max="54">
+      <button onclick="checkSeat()">Определить</button>
+      <div id="result"></div>
+</div>
+<p><a href="./Task.html">Отдельная страница Задача</a></p>
+ 
+  <script>
+      function checkSeat() {
+          const input = document.getElementById('seat');
+          const resultDiv = document.getElementById('result');
+          const seat = parseInt(input.value, 10);
+ 
+          if (isNaN(seat) || seat < 1 || seat > 54) {
+              resultDiv.className = 'error';
+              resultDiv.textContent = 'Ошибка';
+              return;
+          }
+ 
+          if (seat <= 36) {
+              type = 'в купе';
+              position = (seat % 2 === 1) ? 'нижнее' : 'верхнее';
+          } else {
+              type = 'боковое';
+              if (seat === 37 || seat === 38) {
+                  position = 'нижнее';
+              } else {
+                  position = (seat % 2 === 1) ? 'нижнее' : 'верхнее';
+              }
+          }
+ 
+          resultDiv.className = 'success';
+          resultDiv.textContent = `Место ${seat} ${position}, ${type}.`;
+      }
+   </script>
+<p><a href="#top">К началу</a></p>
+<p><a href="./aircraft.html">На главную страницу</a></p>
+</body>
+</html>

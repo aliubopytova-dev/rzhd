@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>FIO</title> 
+</head>
+ 
+<body>
+ 
+<h1>
+    <p id="FIO">FIO</p>
+</h1>
+
+<h3><a id="1">ФИО</a></h3>
+<p>Имя <span id="name">Александра</span></p>
+<p>Фамилия <span id="surname">Любопытова</span></p>
+<p>Год рождения <span id="birthyear">2007</span></p>
+<p id="for_click">кликнуть</p>
+<p><a href="#top">К началу</a></p>
+
+<script>function find_edit(){
+    const new_node  = document.getElementById('name')
+    new_node.innerHTML="Aleksandra"
+
+    const surname_node = document.getElementById("surname");
+    surname_node.innerHTML = "Liubopytova";
+
+    const birthyear_node = document.getElementById("birthyear");
+    birthyear_node.innerHTML = "two thousand seven";
+}
+
+const node_for_click = document.getElementById("for_click")
+node_for_click.addEventListener("click",find_edit)
+</script>
+
+<p><a href="./13-14.html">На главную страницу</a></p>
+</body>
+</html>

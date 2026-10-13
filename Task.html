@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Task</title> 
+</head>
+ 
+<body>
+ 
+<h1>
+    <p id="Task">Задача</p>
+</h1>
+ 
+<h3><a id="3">Задача</a></h3>
+<div class="card">
+      <p>Плацкартный вагон</p>
+      <p>Введите номер места (1–54):</p>
+      <input type="number" id="seat" min="1" max="54">
+      <button onclick="checkSeat()">Определить</button>
+      <div id="result"></div>
+</div>
+ 
+  <script>
+      function checkSeat() {
+          const input = document.getElementById('seat');
+          const resultDiv = document.getElementById('result');
+          const seat = parseInt(input.value, 10);
+ 
+          if (isNaN(seat) || seat < 1 || seat > 54) {
+              resultDiv.className = 'error';
+              resultDiv.textContent = 'Ошибка';
+              return;
+          }
+ 
+          if (seat <= 36) {
+              type = 'в купе';
+              position = (seat % 2 === 1) ? 'нижнее' : 'верхнее';
+          } else {
+              type = 'боковое';
+              if (seat === 37 || seat === 38) {
+                  position = 'нижнее';
+              } else {
+                  position = (seat % 2 === 1) ? 'нижнее' : 'верхнее';
+              }
+          }
+ 
+          resultDiv.className = 'success';
+          resultDiv.textContent = `Место ${seat} ${position}, ${type}.`;
+      }
+   </script>
+<p><a href="./13-14.html">На главную страницу</a></p>
+</body>
+</html>

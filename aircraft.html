@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>aircraft</title>
+  <style>
+    body {
+        background-image: url('./aircraft_img/sky.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        }
+  </style>
+</head>
+ 
+<body>
+  <a id="top"><h2 align="center">Навигация</h2></a>
+
+  <table align="center" cellspacing="10" cellpadding="20" border="2" width="1000px"
+    background="./aircraft_img/map.png">
+
+    <tr align="center">
+      <td colspan="3" height="50px">
+        <img src="./aircraft_img/logo.jpg" alt="grunder industries" height="200"><br><h1>NORTH OSEA GRUNDER INDUSTRIES</h1>
+      </td>
+    </tr>    
+    <tr>
+      <td height="200px">
+        Навигация
+        <p><a href="./stat.html">Продукция компании</a></p>
+        <p><a href="./history.html">История компании</a></p>
+        <p><a href="./13-14.html"><img src="./aircraft_img/ZOE_emblem.jpg" alt="ZOE" height="100"></a></p>
+      </td>
+      <td align="center" background="./aircraft_img/ZOE_emblem.jpg">
+        <img src="./aircraft_img/belka.jpg" width="250">
+      </td>
+      <td>
+        <p>Разделы</p>
+        <p><a href="#1" target="_self">Форма для клиента</a></p>
+        <p><a href="#2" target="_self">Источники</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td align=right valign=top colspan="3" height="100px">
+        <ul>Если у вас возникли вопросы по поводу нашей подукции, звоните по этим номерам
+          <li>+Z (ZZZ) ZZZ-ZZ-ZZ Для пользователей из Осеи</li>
+          <li>+X (XXX) XXX-XX-XX Для пользователей из Эрусеи</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <h3 align="center"><a id="1">Форма для клиента</a></h3>
+       <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <p>Для поисковика:<input type="hidden" name="q" value="search"></p>
+        <p>Фамилия: <input type="Text" name="last_name" value="NEMO"></p>
+        <p>Возраст: <input type="Number" name="age" value="0"></p>
+        <p>Место проживания:
+            <input type="Radio" name="place" value="osea" checked>Осейская Федерация
+            <input type="Radio" name="place" value="erusea">Королевство Эрусея
+            <input type="Radio" name="place" value="usea">ФЦУ
+            <input type="Radio" name="place" value="yk">Союз Юктобанских Республик
+        </p>
+        <p>Образование:
+            <input type="Checkbox" name="experience" value="tech" checked>Техническое
+            <input type="Checkbox" name="experience" value="hum" checked>Гуманитарное
+            <input type="Checkbox" name="experience" value="med" checked>Медицинское
+        </p>
+        <p>Имели ли вы раньше дело с нами?
+            <select name="use">
+                <OPTION value="Нет">Нет, я новый пользователь.</OPTION>
+                <OPTION value="Да">Да, я постоянный пользователь.</OPTION>
+                <OPTION value="Сотрудник">Я сотрудник компании.</OPTION>
+            </select>
+        </p>
+        <p> По какому вопросу вы к нам обращаетесь?
+            <br><TEXTAREA cols=80 rows=4 name="textarea">Суть дела</TEXTAREA>
+        </p>
+        <p>Дата: <input type="date" name="user_date" value='0000-00-00'></p>
+        <p>Пароль: <input type="Password" name="password" value="XXX"></p>
+        <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+        <p>Название файла: <input type="Техт" name="000_file_name" value="TXT.txt"></p>
+        <p> Тип записи в файл:<select name="010_mode">
+                <OPTION value="a">a - дозаписать в файл</OPTION>
+                <OPTION value="b">b - очисить файл и записать в файл</OPTION>
+            </select></p>
+        <p>
+            <input type="Reset" name="Reset" value="Обновить">
+            <input type="Submit" name="submit" value="Отправить">
+        </p>
+      </form>
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="3" height="50px">
+        <p><a id="2" href="https://acecombat.fandom.com/ru/wiki/Ace_Combat_%D0%B2%D0%B8%D0%BA%D0%B8" target="_blank">Источники</a></p>
+        <p><a href="https://acecombat.wiki.gg/" target="_blank"><img src="./aircraft_img/logo2.jpg" width="100"></a></p>
+        <p><a href="#top">К началу</a></p>
+      </td>
+    </tr> 
+  </table> 
+
+</body>
+</html>
